@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  api:
+    container_name: api
+    hostname: api
+    build:
+      context: .
+    ports:
+      - 8001:8001  # service
+      - 9001:9001  # debugpy
+    volumes:
+      - ./runtime:/app/runtime
